@@ -12,11 +12,13 @@ echo. ---------------------------
 
 echo  1 - Somenta adicionar a area stage (git add.)
 
-echo. 2 - Fazer um versao local do arquivo
+echo. 2 - Fazer um versao local do arquivo (git commit -m "Versao")
 
-echo. 3 - Opcao 3
+echo. 3 - Manda para as nuvens (git push -u origin master)
 
-echo  4 - Opcao 4
+echo  4 - CTRL Z (git checkout -- .)
+
+echo  5 - OS 3 PRIMEIROS
 
 echo  0 - SAIR
 
@@ -32,38 +34,50 @@ if "%Comando%" equ "3" (goto:op3)
 
 if "%Comando%" equ "4" (goto:op4)
 
+if "%Comando%" equ "5" (goto:op5)
+
 if "%Comando%" equ "0" (goto:exit)
 
 :op1
 git add .
 pause
-
 goto:inicio
 
 :op2
-
 echo Opcao 2
 git commit -m "Versao"
+echo. git commit -m "Versao"
 pause
-
 goto:inicio
 
 :op3
-
-echo Opcao 3
-
+git push -u origin master
+echo.git push -u origin master
 pause
-
 goto:inicio
 
 :op4
-
-echo Opcao 4
-
-pause
-
+echo. checkout -- .
+git checkout -- .
 goto:inicio
 
-:exit
+:op5
+ 
+echo. git add .  +  git commit -m + git push -u origin master 
+git add . 
+git commit -m "Versao" 
+git push -u origin master 
+git log 
 
-exit
+
+:op0
+CLS
+ECHO.
+ECHO.
+ECHO.
+ECHO.
+
+ECHO. use ctrl + C para SAIR
+echo. :exit
+
+ECHO. exit
