@@ -1,6 +1,6 @@
 :inicio
 
-@echo off
+echo off
 
 cls
 
@@ -10,15 +10,15 @@ echo   Menu Principal
 
 echo. ---------------------------
 
-echo  1 - Somenta adicionar a area stage (git add.)
+echo  1 - Somenta adicionar a area stage 	(git add.)
 
-echo. 2 - Fazer um versao local do arquivo (git commit -m "Versao")
+echo. 2 - Fazer um versao local do arquivo 	(git commit -m "Versao")
 
-echo. 3 - Manda para as nuvens (git push -u origin master)
+echo. 3 - Manda para as nuvens 	(git push -u origin master)
 
-echo  4 - CTRL Z (git checkout -- .)
+echo  4 - CTRL Z 		(git checkout -- .)
 
-echo  5 - OS 3 PRIMEIROS
+echo  5 - OS 3 Primeiros + gitk ( add, comit, push )
 
 echo  0 - SAIR
 
@@ -47,7 +47,6 @@ goto:inicio
 echo Opcao 2
 git commit -m "Versao"
 echo. git commit -m "Versao"
-pause
 goto:inicio
 
 :op3
@@ -58,7 +57,10 @@ goto:inicio
 
 :op4
 echo. checkout -- .
-git checkout -- .
+git checkout -- leiame.txt
+echo. = Caso vc tenha dado um git add . depois, usar este comando ele retorna ultima versao.
+
+pause
 goto:inicio
 
 :op5
@@ -67,7 +69,7 @@ echo. git add .  +  git commit -m + git push -u origin master
 git add . 
 git commit -m "Versao" 
 git push -u origin master 
-git log 
+git gitk 
 
 
 :op0
