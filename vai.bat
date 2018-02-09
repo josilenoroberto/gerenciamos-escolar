@@ -20,7 +20,9 @@ echo  4 - CTRL Z 				(git checkout -- .)
 
 echo  5 - OS 3 Primeiros  			(add, comit, push )
 
-echo  6 - Linha do tempo
+echo  6 - Linha do tempo ( ainda a programar)
+
+echo  7 -  ( ainda a programar)
 
 echo  0 - SAIR
 
@@ -37,6 +39,10 @@ if "%Comando%" equ "3" (goto:op3)
 if "%Comando%" equ "4" (goto:op4)
 
 if "%Comando%" equ "5" (goto:op5)
+
+if "%Comando%" equ "6" (goto:op6)
+
+if "%Comando%" equ "7" (goto:op7)
 
 if "%Comando%" equ "0" (goto:exit)
 
@@ -73,10 +79,17 @@ git push -u origin master
 gitk 
 goto:inicio
 
-
-:op5
+echo. *** 6 ainda a programar
+:op6
 echo. 
 goto:inicio
+
+
+echo. *** 7 ainda a programar
+:op7
+echo. 
+goto:inicio
+
 
 
 :op0
